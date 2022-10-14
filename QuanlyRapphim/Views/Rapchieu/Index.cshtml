@@ -1,0 +1,139 @@
+﻿@model IEnumerable<QuanlyRapphim.Cinema>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 align="center">RẠP CHIẾU ĐANG HOẠT ĐỘNG</h2>
+
+<table>
+
+    @foreach (var item in Model)
+    {
+        
+        <tr>
+            <th>
+                <hr />
+                <link rel="stylesheet" href="~/css/indexphim.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+                <div class="container">
+                    <!-- start event block -->
+                    <div class="row align-items-center event-block no-gutters margin-40px-bottom">
+                        <div class="col-lg-5 col-sm-12">
+                            <div class="position-relative">
+                                <img style="width:470px; height:300px" src="~/Content/Rapimages/@Html.DisplayFor(modelItem => item.Image)" />
+
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-sm-12">
+                            <div class="padding-60px-lr md-padding-50px-lr sm-padding-30px-all xs-padding-25px-all">
+                                <h5 class="margin-15px-bottom md-margin-10px-bottom font-size22 md-font-size20 xs-font-size18 font-weight-500"><a href="event-details.html" class="text-theme-color">THÔNG TIN</a></h5>
+                                <ul class="event-time margin-10px-bottom md-margin-5px-bottom">
+                                    <li><i class="far fa-clock margin-10px-right"></i>@Html.DisplayFor(modelItem => item.NameCi) </li>
+                                    <li><i class="fas fa-user margin-5px-right"></i>Địa chỉ: @Html.DisplayFor(modelItem => item.Address)</li>
+                                    <li><i class="fas fa-user margin-5px-right"></i>Số chỗ ngồi: @Html.DisplayFor(modelItem => item.Seats)</li>
+                                    <li><i class="fas fa-user margin-5px-right"></i>SDT: @Html.DisplayFor(modelItem => item.Phone)</li>
+                                    <li><i class="fas fa-user margin-5px-right"></i>Status: @Html.DisplayFor(modelItem => item.Status) </li>
+                                    <li><i class="fas fa-user margin-5px-right"></i>Giá vé chỉ từ 45k </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </th>
+        </tr>
+    }
+
+</table>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2 align="center">DANH SÁCH RẠP CHIẾU</h2>
+<style>
+    body {
+        background-color: #DAA520;
+        width: 1200px;
+        margin: 0px auto;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    p {
+        color: #000000;
+    }
+    h5{
+        color:#DAA520;
+    }
+
+    th {
+        background-color: white;
+        color: #000000;
+    }
+</style>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NameCi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Seats)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameCi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Seats)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CinId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CinId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CinId })
+            </td>
+        </tr>
+    }
+
+</table>

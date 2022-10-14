@@ -1,0 +1,957 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLRPCNSModelStoreContainer" CdmEntityContainer="QLRPCNSEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="QLRPCNSModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="AdmId" ColumnName="AdmId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Bod" ColumnName="Bod" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bookings">
+      <EntityTypeMapping TypeName="QLRPCNSModel.Booking">
+        <MappingFragment StoreEntitySet="Booking">
+          <ScalarProperty Name="BooId" ColumnName="BooId" />
+          <ScalarProperty Name="CusId" ColumnName="CusId" />
+          <ScalarProperty Name="ShoId" ColumnName="ShoId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Bilmoney" ColumnName="Bilmoney" />
+          <ScalarProperty Name="DateBooking" ColumnName="DateBooking" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cinemas">
+      <EntityTypeMapping TypeName="QLRPCNSModel.Cinema">
+        <MappingFragment StoreEntitySet="Cinema">
+          <ScalarProperty Name="CinId" ColumnName="CinId" />
+          <ScalarProperty Name="NameCi" ColumnName="NameCi" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Seats" ColumnName="Seats" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="QLRPCNSModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="CouId" ColumnName="CouId" />
+          <ScalarProperty Name="NameCo" ColumnName="NameCo" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="QLRPCNSModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="CusId" ColumnName="CusId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Bod" ColumnName="Bod" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Avata" ColumnName="Avata" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Feedbacks">
+      <EntityTypeMapping TypeName="QLRPCNSModel.Feedback">
+        <MappingFragment StoreEntitySet="Feedback">
+          <ScalarProperty Name="FeeId" ColumnName="FeeId" />
+          <ScalarProperty Name="FilId" ColumnName="FilId" />
+          <ScalarProperty Name="Avata" ColumnName="Avata" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Films">
+      <EntityTypeMapping TypeName="QLRPCNSModel.Film">
+        <MappingFragment StoreEntitySet="Film">
+          <ScalarProperty Name="FilId" ColumnName="FilId" />
+          <ScalarProperty Name="TypId" ColumnName="TypId" />
+          <ScalarProperty Name="CouId" ColumnName="CouId" />
+          <ScalarProperty Name="NameF" ColumnName="NameF" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+          <ScalarProperty Name="Actor" ColumnName="Actor" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="PictureBig" ColumnName="PictureBig" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowTimes">
+      <EntityTypeMapping TypeName="QLRPCNSModel.ShowTime">
+        <MappingFragment StoreEntitySet="ShowTimes">
+          <ScalarProperty Name="ShoId" ColumnName="ShoId" />
+          <ScalarProperty Name="FilId" ColumnName="FilId" />
+          <ScalarProperty Name="CinId" ColumnName="CinId" />
+          <ScalarProperty Name="ShowTime1" ColumnName="ShowTime" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="View" ColumnName="View" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QLRPCNSModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeFilms">
+      <EntityTypeMapping TypeName="QLRPCNSModel.TypeFilm">
+        <MappingFragment StoreEntitySet="TypeFilm">
+          <ScalarProperty Name="TypId" ColumnName="TypId" />
+          <ScalarProperty Name="NameT" ColumnName="NameT" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_Admin_ChangePass" FunctionName="QLRPCNSModel.Store.sp_Admin_ChangePass" />
+    <FunctionImportMapping FunctionImportName="sp_Admin_CheckLogin" FunctionName="QLRPCNSModel.Store.sp_Admin_CheckLogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Admin_CheckLogin_Result">
+          <ScalarProperty Name="AdmId" ColumnName="AdmId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Bod" ColumnName="Bod" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Admin_GetByAll" FunctionName="QLRPCNSModel.Store.sp_Admin_GetByAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Admin_GetByAll_Result">
+          <ScalarProperty Name="AdmId" ColumnName="AdmId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Bod" ColumnName="Bod" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Admin_GetById" FunctionName="QLRPCNSModel.Store.sp_Admin_GetById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Admin_GetById_Result">
+          <ScalarProperty Name="AdmId" ColumnName="AdmId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Bod" ColumnName="Bod" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Admin_Update" FunctionName="QLRPCNSModel.Store.sp_Admin_Update" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="QLRPCNSModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_Booking_Delete" FunctionName="QLRPCNSModel.Store.sp_Booking_Delete" />
+    <FunctionImportMapping FunctionImportName="sp_Booking_GetByAll" FunctionName="QLRPCNSModel.Store.sp_Booking_GetByAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Booking_GetByAll_Result">
+          <ScalarProperty Name="BooId" ColumnName="BooId" />
+          <ScalarProperty Name="CusId" ColumnName="CusId" />
+          <ScalarProperty Name="ShoId" ColumnName="ShoId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Bilmoney" ColumnName="Bilmoney" />
+          <ScalarProperty Name="DateBooking" ColumnName="DateBooking" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CusId1" ColumnName="CusId1" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Bod" ColumnName="Bod" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Avata" ColumnName="Avata" />
+          <ScalarProperty Name="Status1" ColumnName="Status1" />
+          <ScalarProperty Name="BooId1" ColumnName="BooId1" />
+          <ScalarProperty Name="CusId2" ColumnName="CusId2" />
+          <ScalarProperty Name="ShoId1" ColumnName="ShoId1" />
+          <ScalarProperty Name="Quantity1" ColumnName="Quantity1" />
+          <ScalarProperty Name="Bilmoney1" ColumnName="Bilmoney1" />
+          <ScalarProperty Name="DateBooking1" ColumnName="DateBooking1" />
+          <ScalarProperty Name="Status2" ColumnName="Status2" />
+          <ScalarProperty Name="CusId3" ColumnName="CusId3" />
+          <ScalarProperty Name="Username1" ColumnName="Username1" />
+          <ScalarProperty Name="Password1" ColumnName="Password1" />
+          <ScalarProperty Name="CreditCard1" ColumnName="CreditCard1" />
+          <ScalarProperty Name="FullName1" ColumnName="FullName1" />
+          <ScalarProperty Name="Bod1" ColumnName="Bod1" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Email1" ColumnName="Email1" />
+          <ScalarProperty Name="Avata1" ColumnName="Avata1" />
+          <ScalarProperty Name="Status3" ColumnName="Status3" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Booking_GetByCusId" FunctionName="QLRPCNSModel.Store.sp_Booking_GetByCusId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Booking_GetByCusId_Result">
+          <ScalarProperty Name="BooId" ColumnName="BooId" />
+          <ScalarProperty Name="CusId" ColumnName="CusId" />
+          <ScalarProperty Name="ShoId" ColumnName="ShoId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Bilmoney" ColumnName="Bilmoney" />
+          <ScalarProperty Name="DateBooking" ColumnName="DateBooking" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Booking_GetById" FunctionName="QLRPCNSModel.Store.sp_Booking_GetById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Booking_GetById_Result">
+          <ScalarProperty Name="BooId" ColumnName="BooId" />
+          <ScalarProperty Name="CusId" ColumnName="CusId" />
+          <ScalarProperty Name="ShoId" ColumnName="ShoId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Bilmoney" ColumnName="Bilmoney" />
+          <ScalarProperty Name="DateBooking" ColumnName="DateBooking" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CusId1" ColumnName="CusId1" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Bod" ColumnName="Bod" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Avata" ColumnName="Avata" />
+          <ScalarProperty Name="Status1" ColumnName="Status1" />
+          <ScalarProperty Name="ShoId1" ColumnName="ShoId1" />
+          <ScalarProperty Name="FilId" ColumnName="FilId" />
+          <ScalarProperty Name="CinId" ColumnName="CinId" />
+          <ScalarProperty Name="ShowTime" ColumnName="ShowTime" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="View" ColumnName="View" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Status2" ColumnName="Status2" />
+          <ScalarProperty Name="FilId1" ColumnName="FilId1" />
+          <ScalarProperty Name="TypId" ColumnName="TypId" />
+          <ScalarProperty Name="CouId" ColumnName="CouId" />
+          <ScalarProperty Name="NameF" ColumnName="NameF" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+          <ScalarProperty Name="Actor" ColumnName="Actor" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="PictureBig" ColumnName="PictureBig" />
+          <ScalarProperty Name="Status3" ColumnName="Status3" />
+          <ScalarProperty Name="BooId1" ColumnName="BooId1" />
+          <ScalarProperty Name="CusId2" ColumnName="CusId2" />
+          <ScalarProperty Name="ShoId2" ColumnName="ShoId2" />
+          <ScalarProperty Name="Quantity1" ColumnName="Quantity1" />
+          <ScalarProperty Name="Bilmoney1" ColumnName="Bilmoney1" />
+          <ScalarProperty Name="DateBooking1" ColumnName="DateBooking1" />
+          <ScalarProperty Name="Status4" ColumnName="Status4" />
+          <ScalarProperty Name="CusId3" ColumnName="CusId3" />
+          <ScalarProperty Name="Username1" ColumnName="Username1" />
+          <ScalarProperty Name="Password1" ColumnName="Password1" />
+          <ScalarProperty Name="CreditCard1" ColumnName="CreditCard1" />
+          <ScalarProperty Name="FullName1" ColumnName="FullName1" />
+          <ScalarProperty Name="Bod1" ColumnName="Bod1" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Email1" ColumnName="Email1" />
+          <ScalarProperty Name="Avata1" ColumnName="Avata1" />
+          <ScalarProperty Name="Status5" ColumnName="Status5" />
+          <ScalarProperty Name="ShoId3" ColumnName="ShoId3" />
+          <ScalarProperty Name="FilId2" ColumnName="FilId2" />
+          <ScalarProperty Name="CinId1" ColumnName="CinId1" />
+          <ScalarProperty Name="ShowTime1" ColumnName="ShowTime1" />
+          <ScalarProperty Name="Time1" ColumnName="Time1" />
+          <ScalarProperty Name="View1" ColumnName="View1" />
+          <ScalarProperty Name="Price1" ColumnName="Price1" />
+          <ScalarProperty Name="Status6" ColumnName="Status6" />
+          <ScalarProperty Name="FilId3" ColumnName="FilId3" />
+          <ScalarProperty Name="TypId1" ColumnName="TypId1" />
+          <ScalarProperty Name="CouId1" ColumnName="CouId1" />
+          <ScalarProperty Name="NameF1" ColumnName="NameF1" />
+          <ScalarProperty Name="Director1" ColumnName="Director1" />
+          <ScalarProperty Name="Actor1" ColumnName="Actor1" />
+          <ScalarProperty Name="Duration1" ColumnName="Duration1" />
+          <ScalarProperty Name="Description1" ColumnName="Description1" />
+          <ScalarProperty Name="Detail1" ColumnName="Detail1" />
+          <ScalarProperty Name="Picture1" ColumnName="Picture1" />
+          <ScalarProperty Name="PictureBig1" ColumnName="PictureBig1" />
+          <ScalarProperty Name="Status7" ColumnName="Status7" />
+          <ScalarProperty Name="Pic" ColumnName="Pic" />
+          <ScalarProperty Name="BooId2" ColumnName="BooId2" />
+          <ScalarProperty Name="CusId4" ColumnName="CusId4" />
+          <ScalarProperty Name="ShoId4" ColumnName="ShoId4" />
+          <ScalarProperty Name="Quantity2" ColumnName="Quantity2" />
+          <ScalarProperty Name="Bilmoney2" ColumnName="Bilmoney2" />
+          <ScalarProperty Name="DateBooking2" ColumnName="DateBooking2" />
+          <ScalarProperty Name="Status8" ColumnName="Status8" />
+          <ScalarProperty Name="CusId5" ColumnName="CusId5" />
+          <ScalarProperty Name="Username2" ColumnName="Username2" />
+          <ScalarProperty Name="Password2" ColumnName="Password2" />
+          <ScalarProperty Name="CreditCard2" ColumnName="CreditCard2" />
+          <ScalarProperty Name="FullName2" ColumnName="FullName2" />
+          <ScalarProperty Name="Bod2" ColumnName="Bod2" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="Email2" ColumnName="Email2" />
+          <ScalarProperty Name="Avata2" ColumnName="Avata2" />
+          <ScalarProperty Name="Status9" ColumnName="Status9" />
+          <ScalarProperty Name="ShoId5" ColumnName="ShoId5" />
+          <ScalarProperty Name="FilId4" ColumnName="FilId4" />
+          <ScalarProperty Name="CinId2" ColumnName="CinId2" />
+          <ScalarProperty Name="ShowTime2" ColumnName="ShowTime2" />
+          <ScalarProperty Name="Time2" ColumnName="Time2" />
+          <ScalarProperty Name="View2" ColumnName="View2" />
+          <ScalarProperty Name="Price2" ColumnName="Price2" />
+          <ScalarProperty Name="Status10" ColumnName="Status10" />
+          <ScalarProperty Name="FilId5" ColumnName="FilId5" />
+          <ScalarProperty Name="TypId2" ColumnName="TypId2" />
+          <ScalarProperty Name="CouId2" ColumnName="CouId2" />
+          <ScalarProperty Name="NameF2" ColumnName="NameF2" />
+          <ScalarProperty Name="Director2" ColumnName="Director2" />
+          <ScalarProperty Name="Actor2" ColumnName="Actor2" />
+          <ScalarProperty Name="Duration2" ColumnName="Duration2" />
+          <ScalarProperty Name="Description2" ColumnName="Description2" />
+          <ScalarProperty Name="Detail2" ColumnName="Detail2" />
+          <ScalarProperty Name="Picture2" ColumnName="Picture2" />
+          <ScalarProperty Name="PictureBig2" ColumnName="PictureBig2" />
+          <ScalarProperty Name="Status11" ColumnName="Status11" />
+          <ScalarProperty Name="St" ColumnName="St" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Booking_GetByShoId" FunctionName="QLRPCNSModel.Store.sp_Booking_GetByShoId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Booking_GetByShoId_Result">
+          <ScalarProperty Name="BooId" ColumnName="BooId" />
+          <ScalarProperty Name="CusId" ColumnName="CusId" />
+          <ScalarProperty Name="ShoId" ColumnName="ShoId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Bilmoney" ColumnName="Bilmoney" />
+          <ScalarProperty Name="DateBooking" ColumnName="DateBooking" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Booking_GetByTop" FunctionName="QLRPCNSModel.Store.sp_Booking_GetByTop" />
+    <FunctionImportMapping FunctionImportName="sp_Booking_Insert" FunctionName="QLRPCNSModel.Store.sp_Booking_Insert" />
+    <FunctionImportMapping FunctionImportName="sp_Booking_Sum" FunctionName="QLRPCNSModel.Store.sp_Booking_Sum" />
+    <FunctionImportMapping FunctionImportName="sp_Booking_Update" FunctionName="QLRPCNSModel.Store.sp_Booking_Update" />
+    <FunctionImportMapping FunctionImportName="sp_Cinema_Delete" FunctionName="QLRPCNSModel.Store.sp_Cinema_Delete" />
+    <FunctionImportMapping FunctionImportName="sp_Cinema_GetByAll" FunctionName="QLRPCNSModel.Store.sp_Cinema_GetByAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Cinema_GetByAll_Result">
+          <ScalarProperty Name="CinId" ColumnName="CinId" />
+          <ScalarProperty Name="NameCi" ColumnName="NameCi" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Seats" ColumnName="Seats" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Cinema_GetById" FunctionName="QLRPCNSModel.Store.sp_Cinema_GetById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Cinema_GetById_Result">
+          <ScalarProperty Name="CinId" ColumnName="CinId" />
+          <ScalarProperty Name="NameCi" ColumnName="NameCi" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Seats" ColumnName="Seats" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Cinema_GetByTop" FunctionName="QLRPCNSModel.Store.sp_Cinema_GetByTop" />
+    <FunctionImportMapping FunctionImportName="sp_Cinema_Insert" FunctionName="QLRPCNSModel.Store.sp_Cinema_Insert" />
+    <FunctionImportMapping FunctionImportName="sp_Cinema_Update" FunctionName="QLRPCNSModel.Store.sp_Cinema_Update" />
+    <FunctionImportMapping FunctionImportName="sp_Cinema_Update_Status" FunctionName="QLRPCNSModel.Store.sp_Cinema_Update_Status" />
+    <FunctionImportMapping FunctionImportName="sp_Country_Delete" FunctionName="QLRPCNSModel.Store.sp_Country_Delete" />
+    <FunctionImportMapping FunctionImportName="sp_Country_GetByAll" FunctionName="QLRPCNSModel.Store.sp_Country_GetByAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Country_GetByAll_Result">
+          <ScalarProperty Name="CouId" ColumnName="CouId" />
+          <ScalarProperty Name="NameCo" ColumnName="NameCo" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Country_GetById" FunctionName="QLRPCNSModel.Store.sp_Country_GetById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Country_GetById_Result">
+          <ScalarProperty Name="CouId" ColumnName="CouId" />
+          <ScalarProperty Name="NameCo" ColumnName="NameCo" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Country_GetByTop" FunctionName="QLRPCNSModel.Store.sp_Country_GetByTop" />
+    <FunctionImportMapping FunctionImportName="sp_Country_Insert" FunctionName="QLRPCNSModel.Store.sp_Country_Insert" />
+    <FunctionImportMapping FunctionImportName="sp_Country_Update" FunctionName="QLRPCNSModel.Store.sp_Country_Update" />
+    <FunctionImportMapping FunctionImportName="sp_Country_Update_Status" FunctionName="QLRPCNSModel.Store.sp_Country_Update_Status" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="QLRPCNSModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_Customer_ChangePass" FunctionName="QLRPCNSModel.Store.sp_Customer_ChangePass" />
+    <FunctionImportMapping FunctionImportName="sp_Customer_CheckLogin" FunctionName="QLRPCNSModel.Store.sp_Customer_CheckLogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Customer_CheckLogin_Result">
+          <ScalarProperty Name="CusId" ColumnName="CusId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Bod" ColumnName="Bod" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Avata" ColumnName="Avata" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Customer_Delete" FunctionName="QLRPCNSModel.Store.sp_Customer_Delete" />
+    <FunctionImportMapping FunctionImportName="sp_Customer_GetByAll" FunctionName="QLRPCNSModel.Store.sp_Customer_GetByAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Customer_GetByAll_Result">
+          <ScalarProperty Name="CusId" ColumnName="CusId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Bod" ColumnName="Bod" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Avata" ColumnName="Avata" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Customer_GetById" FunctionName="QLRPCNSModel.Store.sp_Customer_GetById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Customer_GetById_Result">
+          <ScalarProperty Name="CusId" ColumnName="CusId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Bod" ColumnName="Bod" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Avata" ColumnName="Avata" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Customer_GetByTop" FunctionName="QLRPCNSModel.Store.sp_Customer_GetByTop" />
+    <FunctionImportMapping FunctionImportName="sp_Customer_Insert" FunctionName="QLRPCNSModel.Store.sp_Customer_Insert" />
+    <FunctionImportMapping FunctionImportName="sp_Customer_Update" FunctionName="QLRPCNSModel.Store.sp_Customer_Update" />
+    <FunctionImportMapping FunctionImportName="sp_Customer_Update_Status" FunctionName="QLRPCNSModel.Store.sp_Customer_Update_Status" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="QLRPCNSModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_Feedback_Delete" FunctionName="QLRPCNSModel.Store.sp_Feedback_Delete" />
+    <FunctionImportMapping FunctionImportName="sp_Feedback_GetByAll" FunctionName="QLRPCNSModel.Store.sp_Feedback_GetByAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Feedback_GetByAll_Result">
+          <ScalarProperty Name="FeeId" ColumnName="FeeId" />
+          <ScalarProperty Name="FilId" ColumnName="FilId" />
+          <ScalarProperty Name="Avata" ColumnName="Avata" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Feedback_GetByFilId" FunctionName="QLRPCNSModel.Store.sp_Feedback_GetByFilId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Feedback_GetByFilId_Result">
+          <ScalarProperty Name="FeeId" ColumnName="FeeId" />
+          <ScalarProperty Name="FilId" ColumnName="FilId" />
+          <ScalarProperty Name="Avata" ColumnName="Avata" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Feedback_GetById" FunctionName="QLRPCNSModel.Store.sp_Feedback_GetById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Feedback_GetById_Result">
+          <ScalarProperty Name="FeeId" ColumnName="FeeId" />
+          <ScalarProperty Name="FilId" ColumnName="FilId" />
+          <ScalarProperty Name="Avata" ColumnName="Avata" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Feedback_GetByTop" FunctionName="QLRPCNSModel.Store.sp_Feedback_GetByTop" />
+    <FunctionImportMapping FunctionImportName="sp_Feedback_Insert" FunctionName="QLRPCNSModel.Store.sp_Feedback_Insert" />
+    <FunctionImportMapping FunctionImportName="sp_Feedback_Update" FunctionName="QLRPCNSModel.Store.sp_Feedback_Update" />
+    <FunctionImportMapping FunctionImportName="sp_Film_Delete" FunctionName="QLRPCNSModel.Store.sp_Film_Delete" />
+    <FunctionImportMapping FunctionImportName="sp_Film_GetByAll" FunctionName="QLRPCNSModel.Store.sp_Film_GetByAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Film_GetByAll_Result">
+          <ScalarProperty Name="FilId" ColumnName="FilId" />
+          <ScalarProperty Name="TypId" ColumnName="TypId" />
+          <ScalarProperty Name="CouId" ColumnName="CouId" />
+          <ScalarProperty Name="NameF" ColumnName="NameF" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+          <ScalarProperty Name="Actor" ColumnName="Actor" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="PictureBig" ColumnName="PictureBig" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CouId1" ColumnName="CouId1" />
+          <ScalarProperty Name="NameCo" ColumnName="NameCo" />
+          <ScalarProperty Name="Status1" ColumnName="Status1" />
+          <ScalarProperty Name="TypId1" ColumnName="TypId1" />
+          <ScalarProperty Name="NameT" ColumnName="NameT" />
+          <ScalarProperty Name="Status2" ColumnName="Status2" />
+          <ScalarProperty Name="FilId1" ColumnName="FilId1" />
+          <ScalarProperty Name="TypId2" ColumnName="TypId2" />
+          <ScalarProperty Name="CouId2" ColumnName="CouId2" />
+          <ScalarProperty Name="NameF1" ColumnName="NameF1" />
+          <ScalarProperty Name="Director1" ColumnName="Director1" />
+          <ScalarProperty Name="Actor1" ColumnName="Actor1" />
+          <ScalarProperty Name="Duration1" ColumnName="Duration1" />
+          <ScalarProperty Name="Description1" ColumnName="Description1" />
+          <ScalarProperty Name="Detail1" ColumnName="Detail1" />
+          <ScalarProperty Name="Picture1" ColumnName="Picture1" />
+          <ScalarProperty Name="PictureBig1" ColumnName="PictureBig1" />
+          <ScalarProperty Name="Status3" ColumnName="Status3" />
+          <ScalarProperty Name="CouId3" ColumnName="CouId3" />
+          <ScalarProperty Name="NameCo1" ColumnName="NameCo1" />
+          <ScalarProperty Name="Status4" ColumnName="Status4" />
+          <ScalarProperty Name="TypId3" ColumnName="TypId3" />
+          <ScalarProperty Name="NameT1" ColumnName="NameT1" />
+          <ScalarProperty Name="Status5" ColumnName="Status5" />
+          <ScalarProperty Name="FilId2" ColumnName="FilId2" />
+          <ScalarProperty Name="TypId4" ColumnName="TypId4" />
+          <ScalarProperty Name="CouId4" ColumnName="CouId4" />
+          <ScalarProperty Name="NameF2" ColumnName="NameF2" />
+          <ScalarProperty Name="Director2" ColumnName="Director2" />
+          <ScalarProperty Name="Actor2" ColumnName="Actor2" />
+          <ScalarProperty Name="Duration2" ColumnName="Duration2" />
+          <ScalarProperty Name="Description2" ColumnName="Description2" />
+          <ScalarProperty Name="Detail2" ColumnName="Detail2" />
+          <ScalarProperty Name="Picture2" ColumnName="Picture2" />
+          <ScalarProperty Name="PictureBig2" ColumnName="PictureBig2" />
+          <ScalarProperty Name="Status6" ColumnName="Status6" />
+          <ScalarProperty Name="CouId5" ColumnName="CouId5" />
+          <ScalarProperty Name="NameCo2" ColumnName="NameCo2" />
+          <ScalarProperty Name="Status7" ColumnName="Status7" />
+          <ScalarProperty Name="TypId5" ColumnName="TypId5" />
+          <ScalarProperty Name="NameT2" ColumnName="NameT2" />
+          <ScalarProperty Name="Status8" ColumnName="Status8" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Film_GetByCouId" FunctionName="QLRPCNSModel.Store.sp_Film_GetByCouId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Film_GetByCouId_Result">
+          <ScalarProperty Name="FilId" ColumnName="FilId" />
+          <ScalarProperty Name="TypId" ColumnName="TypId" />
+          <ScalarProperty Name="CouId" ColumnName="CouId" />
+          <ScalarProperty Name="NameF" ColumnName="NameF" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+          <ScalarProperty Name="Actor" ColumnName="Actor" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="PictureBig" ColumnName="PictureBig" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Film_GetById" FunctionName="QLRPCNSModel.Store.sp_Film_GetById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Film_GetById_Result">
+          <ScalarProperty Name="FilId" ColumnName="FilId" />
+          <ScalarProperty Name="TypId" ColumnName="TypId" />
+          <ScalarProperty Name="CouId" ColumnName="CouId" />
+          <ScalarProperty Name="NameF" ColumnName="NameF" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+          <ScalarProperty Name="Actor" ColumnName="Actor" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="PictureBig" ColumnName="PictureBig" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CouId1" ColumnName="CouId1" />
+          <ScalarProperty Name="NameCo" ColumnName="NameCo" />
+          <ScalarProperty Name="Status1" ColumnName="Status1" />
+          <ScalarProperty Name="TypId1" ColumnName="TypId1" />
+          <ScalarProperty Name="NameT" ColumnName="NameT" />
+          <ScalarProperty Name="Status2" ColumnName="Status2" />
+          <ScalarProperty Name="FilId1" ColumnName="FilId1" />
+          <ScalarProperty Name="TypId2" ColumnName="TypId2" />
+          <ScalarProperty Name="CouId2" ColumnName="CouId2" />
+          <ScalarProperty Name="NameF1" ColumnName="NameF1" />
+          <ScalarProperty Name="Director1" ColumnName="Director1" />
+          <ScalarProperty Name="Actor1" ColumnName="Actor1" />
+          <ScalarProperty Name="Duration1" ColumnName="Duration1" />
+          <ScalarProperty Name="Description1" ColumnName="Description1" />
+          <ScalarProperty Name="Detail1" ColumnName="Detail1" />
+          <ScalarProperty Name="Picture1" ColumnName="Picture1" />
+          <ScalarProperty Name="PictureBig1" ColumnName="PictureBig1" />
+          <ScalarProperty Name="Status3" ColumnName="Status3" />
+          <ScalarProperty Name="CouId3" ColumnName="CouId3" />
+          <ScalarProperty Name="NameCo1" ColumnName="NameCo1" />
+          <ScalarProperty Name="Status4" ColumnName="Status4" />
+          <ScalarProperty Name="TypId3" ColumnName="TypId3" />
+          <ScalarProperty Name="NameT1" ColumnName="NameT1" />
+          <ScalarProperty Name="Status5" ColumnName="Status5" />
+          <ScalarProperty Name="FilId2" ColumnName="FilId2" />
+          <ScalarProperty Name="TypId4" ColumnName="TypId4" />
+          <ScalarProperty Name="CouId4" ColumnName="CouId4" />
+          <ScalarProperty Name="NameF2" ColumnName="NameF2" />
+          <ScalarProperty Name="Director2" ColumnName="Director2" />
+          <ScalarProperty Name="Actor2" ColumnName="Actor2" />
+          <ScalarProperty Name="Duration2" ColumnName="Duration2" />
+          <ScalarProperty Name="Description2" ColumnName="Description2" />
+          <ScalarProperty Name="Detail2" ColumnName="Detail2" />
+          <ScalarProperty Name="Picture2" ColumnName="Picture2" />
+          <ScalarProperty Name="PictureBig2" ColumnName="PictureBig2" />
+          <ScalarProperty Name="Status6" ColumnName="Status6" />
+          <ScalarProperty Name="CouId5" ColumnName="CouId5" />
+          <ScalarProperty Name="NameCo2" ColumnName="NameCo2" />
+          <ScalarProperty Name="Status7" ColumnName="Status7" />
+          <ScalarProperty Name="TypId5" ColumnName="TypId5" />
+          <ScalarProperty Name="NameT2" ColumnName="NameT2" />
+          <ScalarProperty Name="Status8" ColumnName="Status8" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Film_GetByTop" FunctionName="QLRPCNSModel.Store.sp_Film_GetByTop" />
+    <FunctionImportMapping FunctionImportName="sp_Film_GetByTypId" FunctionName="QLRPCNSModel.Store.sp_Film_GetByTypId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_Film_GetByTypId_Result">
+          <ScalarProperty Name="FilId" ColumnName="FilId" />
+          <ScalarProperty Name="TypId" ColumnName="TypId" />
+          <ScalarProperty Name="CouId" ColumnName="CouId" />
+          <ScalarProperty Name="NameF" ColumnName="NameF" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+          <ScalarProperty Name="Actor" ColumnName="Actor" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="PictureBig" ColumnName="PictureBig" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Film_Insert" FunctionName="QLRPCNSModel.Store.sp_Film_Insert" />
+    <FunctionImportMapping FunctionImportName="sp_Film_Update" FunctionName="QLRPCNSModel.Store.sp_Film_Update" />
+    <FunctionImportMapping FunctionImportName="sp_Film_Update_Status" FunctionName="QLRPCNSModel.Store.sp_Film_Update_Status" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="QLRPCNSModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="QLRPCNSModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="QLRPCNSModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_ShowTimes_Delete" FunctionName="QLRPCNSModel.Store.sp_ShowTimes_Delete" />
+    <FunctionImportMapping FunctionImportName="sp_ShowTimes_GetByAll" FunctionName="QLRPCNSModel.Store.sp_ShowTimes_GetByAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_ShowTimes_GetByAll_Result">
+          <ScalarProperty Name="ShoId" ColumnName="ShoId" />
+          <ScalarProperty Name="FilId" ColumnName="FilId" />
+          <ScalarProperty Name="CinId" ColumnName="CinId" />
+          <ScalarProperty Name="ShowTime" ColumnName="ShowTime" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="View" ColumnName="View" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="FilId1" ColumnName="FilId1" />
+          <ScalarProperty Name="TypId" ColumnName="TypId" />
+          <ScalarProperty Name="CouId" ColumnName="CouId" />
+          <ScalarProperty Name="NameF" ColumnName="NameF" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+          <ScalarProperty Name="Actor" ColumnName="Actor" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="PictureBig" ColumnName="PictureBig" />
+          <ScalarProperty Name="Status1" ColumnName="Status1" />
+          <ScalarProperty Name="CinId1" ColumnName="CinId1" />
+          <ScalarProperty Name="NameCi" ColumnName="NameCi" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Seats" ColumnName="Seats" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Status2" ColumnName="Status2" />
+          <ScalarProperty Name="ShoId1" ColumnName="ShoId1" />
+          <ScalarProperty Name="FilId2" ColumnName="FilId2" />
+          <ScalarProperty Name="CinId2" ColumnName="CinId2" />
+          <ScalarProperty Name="ShowTime1" ColumnName="ShowTime1" />
+          <ScalarProperty Name="Time1" ColumnName="Time1" />
+          <ScalarProperty Name="View1" ColumnName="View1" />
+          <ScalarProperty Name="Price1" ColumnName="Price1" />
+          <ScalarProperty Name="Status3" ColumnName="Status3" />
+          <ScalarProperty Name="FilId3" ColumnName="FilId3" />
+          <ScalarProperty Name="TypId1" ColumnName="TypId1" />
+          <ScalarProperty Name="CouId1" ColumnName="CouId1" />
+          <ScalarProperty Name="NameF1" ColumnName="NameF1" />
+          <ScalarProperty Name="Director1" ColumnName="Director1" />
+          <ScalarProperty Name="Actor1" ColumnName="Actor1" />
+          <ScalarProperty Name="Duration1" ColumnName="Duration1" />
+          <ScalarProperty Name="Description1" ColumnName="Description1" />
+          <ScalarProperty Name="Detail1" ColumnName="Detail1" />
+          <ScalarProperty Name="Picture1" ColumnName="Picture1" />
+          <ScalarProperty Name="PictureBig1" ColumnName="PictureBig1" />
+          <ScalarProperty Name="Status4" ColumnName="Status4" />
+          <ScalarProperty Name="CinId3" ColumnName="CinId3" />
+          <ScalarProperty Name="NameCi1" ColumnName="NameCi1" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Seats1" ColumnName="Seats1" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Image1" ColumnName="Image1" />
+          <ScalarProperty Name="Status5" ColumnName="Status5" />
+          <ScalarProperty Name="ShoId2" ColumnName="ShoId2" />
+          <ScalarProperty Name="FilId4" ColumnName="FilId4" />
+          <ScalarProperty Name="CinId4" ColumnName="CinId4" />
+          <ScalarProperty Name="ShowTime2" ColumnName="ShowTime2" />
+          <ScalarProperty Name="Time2" ColumnName="Time2" />
+          <ScalarProperty Name="View2" ColumnName="View2" />
+          <ScalarProperty Name="Price2" ColumnName="Price2" />
+          <ScalarProperty Name="Status6" ColumnName="Status6" />
+          <ScalarProperty Name="FilId5" ColumnName="FilId5" />
+          <ScalarProperty Name="TypId2" ColumnName="TypId2" />
+          <ScalarProperty Name="CouId2" ColumnName="CouId2" />
+          <ScalarProperty Name="NameF2" ColumnName="NameF2" />
+          <ScalarProperty Name="Director2" ColumnName="Director2" />
+          <ScalarProperty Name="Actor2" ColumnName="Actor2" />
+          <ScalarProperty Name="Duration2" ColumnName="Duration2" />
+          <ScalarProperty Name="Description2" ColumnName="Description2" />
+          <ScalarProperty Name="Detail2" ColumnName="Detail2" />
+          <ScalarProperty Name="Picture2" ColumnName="Picture2" />
+          <ScalarProperty Name="PictureBig2" ColumnName="PictureBig2" />
+          <ScalarProperty Name="Status7" ColumnName="Status7" />
+          <ScalarProperty Name="CinId5" ColumnName="CinId5" />
+          <ScalarProperty Name="NameCi2" ColumnName="NameCi2" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Seats2" ColumnName="Seats2" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="Image2" ColumnName="Image2" />
+          <ScalarProperty Name="Status8" ColumnName="Status8" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ShowTimes_GetByCinId" FunctionName="QLRPCNSModel.Store.sp_ShowTimes_GetByCinId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_ShowTimes_GetByCinId_Result">
+          <ScalarProperty Name="ShoId" ColumnName="ShoId" />
+          <ScalarProperty Name="FilId" ColumnName="FilId" />
+          <ScalarProperty Name="CinId" ColumnName="CinId" />
+          <ScalarProperty Name="ShowTime" ColumnName="ShowTime" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="View" ColumnName="View" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ShowTimes_GetByFilId" FunctionName="QLRPCNSModel.Store.sp_ShowTimes_GetByFilId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_ShowTimes_GetByFilId_Result">
+          <ScalarProperty Name="ShoId" ColumnName="ShoId" />
+          <ScalarProperty Name="FilId" ColumnName="FilId" />
+          <ScalarProperty Name="CinId" ColumnName="CinId" />
+          <ScalarProperty Name="ShowTime" ColumnName="ShowTime" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="View" ColumnName="View" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CinId1" ColumnName="CinId1" />
+          <ScalarProperty Name="NameCi" ColumnName="NameCi" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Seats" ColumnName="Seats" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Status1" ColumnName="Status1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ShowTimes_GetById" FunctionName="QLRPCNSModel.Store.sp_ShowTimes_GetById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_ShowTimes_GetById_Result">
+          <ScalarProperty Name="ShoId" ColumnName="ShoId" />
+          <ScalarProperty Name="FilId" ColumnName="FilId" />
+          <ScalarProperty Name="CinId" ColumnName="CinId" />
+          <ScalarProperty Name="ShowTime" ColumnName="ShowTime" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="View" ColumnName="View" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="FilId1" ColumnName="FilId1" />
+          <ScalarProperty Name="TypId" ColumnName="TypId" />
+          <ScalarProperty Name="CouId" ColumnName="CouId" />
+          <ScalarProperty Name="NameF" ColumnName="NameF" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+          <ScalarProperty Name="Actor" ColumnName="Actor" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="PictureBig" ColumnName="PictureBig" />
+          <ScalarProperty Name="Status1" ColumnName="Status1" />
+          <ScalarProperty Name="CinId1" ColumnName="CinId1" />
+          <ScalarProperty Name="NameCi" ColumnName="NameCi" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Seats" ColumnName="Seats" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Status2" ColumnName="Status2" />
+          <ScalarProperty Name="ShoId1" ColumnName="ShoId1" />
+          <ScalarProperty Name="FilId2" ColumnName="FilId2" />
+          <ScalarProperty Name="CinId2" ColumnName="CinId2" />
+          <ScalarProperty Name="ShowTime1" ColumnName="ShowTime1" />
+          <ScalarProperty Name="Time1" ColumnName="Time1" />
+          <ScalarProperty Name="View1" ColumnName="View1" />
+          <ScalarProperty Name="Price1" ColumnName="Price1" />
+          <ScalarProperty Name="Status3" ColumnName="Status3" />
+          <ScalarProperty Name="FilId3" ColumnName="FilId3" />
+          <ScalarProperty Name="TypId1" ColumnName="TypId1" />
+          <ScalarProperty Name="CouId1" ColumnName="CouId1" />
+          <ScalarProperty Name="NameF1" ColumnName="NameF1" />
+          <ScalarProperty Name="Director1" ColumnName="Director1" />
+          <ScalarProperty Name="Actor1" ColumnName="Actor1" />
+          <ScalarProperty Name="Duration1" ColumnName="Duration1" />
+          <ScalarProperty Name="Description1" ColumnName="Description1" />
+          <ScalarProperty Name="Detail1" ColumnName="Detail1" />
+          <ScalarProperty Name="Picture1" ColumnName="Picture1" />
+          <ScalarProperty Name="PictureBig1" ColumnName="PictureBig1" />
+          <ScalarProperty Name="Status4" ColumnName="Status4" />
+          <ScalarProperty Name="CinId3" ColumnName="CinId3" />
+          <ScalarProperty Name="NameCi1" ColumnName="NameCi1" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Seats1" ColumnName="Seats1" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Image1" ColumnName="Image1" />
+          <ScalarProperty Name="Status5" ColumnName="Status5" />
+          <ScalarProperty Name="ShoId2" ColumnName="ShoId2" />
+          <ScalarProperty Name="FilId4" ColumnName="FilId4" />
+          <ScalarProperty Name="CinId4" ColumnName="CinId4" />
+          <ScalarProperty Name="ShowTime2" ColumnName="ShowTime2" />
+          <ScalarProperty Name="Time2" ColumnName="Time2" />
+          <ScalarProperty Name="View2" ColumnName="View2" />
+          <ScalarProperty Name="Price2" ColumnName="Price2" />
+          <ScalarProperty Name="Status6" ColumnName="Status6" />
+          <ScalarProperty Name="FilId5" ColumnName="FilId5" />
+          <ScalarProperty Name="TypId2" ColumnName="TypId2" />
+          <ScalarProperty Name="CouId2" ColumnName="CouId2" />
+          <ScalarProperty Name="NameF2" ColumnName="NameF2" />
+          <ScalarProperty Name="Director2" ColumnName="Director2" />
+          <ScalarProperty Name="Actor2" ColumnName="Actor2" />
+          <ScalarProperty Name="Duration2" ColumnName="Duration2" />
+          <ScalarProperty Name="Description2" ColumnName="Description2" />
+          <ScalarProperty Name="Detail2" ColumnName="Detail2" />
+          <ScalarProperty Name="Picture2" ColumnName="Picture2" />
+          <ScalarProperty Name="PictureBig2" ColumnName="PictureBig2" />
+          <ScalarProperty Name="Status7" ColumnName="Status7" />
+          <ScalarProperty Name="CinId5" ColumnName="CinId5" />
+          <ScalarProperty Name="NameCi2" ColumnName="NameCi2" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Seats2" ColumnName="Seats2" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="Image2" ColumnName="Image2" />
+          <ScalarProperty Name="Status8" ColumnName="Status8" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ShowTimes_GetByTop" FunctionName="QLRPCNSModel.Store.sp_ShowTimes_GetByTop" />
+    <FunctionImportMapping FunctionImportName="sp_ShowTimes_GetByTop1" FunctionName="QLRPCNSModel.Store.sp_ShowTimes_GetByTop1" />
+    <FunctionImportMapping FunctionImportName="sp_ShowTimes_GetByTop2" FunctionName="QLRPCNSModel.Store.sp_ShowTimes_GetByTop2" />
+    <FunctionImportMapping FunctionImportName="sp_ShowTimes_Insert" FunctionName="QLRPCNSModel.Store.sp_ShowTimes_Insert" />
+    <FunctionImportMapping FunctionImportName="sp_ShowTimes_Update" FunctionName="QLRPCNSModel.Store.sp_ShowTimes_Update" />
+    <FunctionImportMapping FunctionImportName="sp_ShowTimes_Update_Price" FunctionName="QLRPCNSModel.Store.sp_ShowTimes_Update_Price" />
+    <FunctionImportMapping FunctionImportName="sp_ShowTimes_Update_Status" FunctionName="QLRPCNSModel.Store.sp_ShowTimes_Update_Status" />
+    <FunctionImportMapping FunctionImportName="sp_ShowTimes_Update_View" FunctionName="QLRPCNSModel.Store.sp_ShowTimes_Update_View" />
+    <FunctionImportMapping FunctionImportName="sp_TypeFilm_Delete" FunctionName="QLRPCNSModel.Store.sp_TypeFilm_Delete" />
+    <FunctionImportMapping FunctionImportName="sp_TypeFilm_GetByAll" FunctionName="QLRPCNSModel.Store.sp_TypeFilm_GetByAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_TypeFilm_GetByAll_Result">
+          <ScalarProperty Name="TypId" ColumnName="TypId" />
+          <ScalarProperty Name="NameT" ColumnName="NameT" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_TypeFilm_GetById" FunctionName="QLRPCNSModel.Store.sp_TypeFilm_GetById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLRPCNSModel.sp_TypeFilm_GetById_Result">
+          <ScalarProperty Name="TypId" ColumnName="TypId" />
+          <ScalarProperty Name="NameT" ColumnName="NameT" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_TypeFilm_GetByTop" FunctionName="QLRPCNSModel.Store.sp_TypeFilm_GetByTop" />
+    <FunctionImportMapping FunctionImportName="sp_TypeFilm_Insert" FunctionName="QLRPCNSModel.Store.sp_TypeFilm_Insert" />
+    <FunctionImportMapping FunctionImportName="sp_TypeFilm_Update" FunctionName="QLRPCNSModel.Store.sp_TypeFilm_Update" />
+    <FunctionImportMapping FunctionImportName="sp_TypeFilm_Update_Status" FunctionName="QLRPCNSModel.Store.sp_TypeFilm_Update_Status" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="QLRPCNSModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="sp_Customer_GetByAlls" FunctionName="QLRPCNSModel.Store.sp_Customer_GetByAll" />
+    <FunctionImportMapping FunctionImportName="get_KH" FunctionName="QLRPCNSModel.Store.sp_Customer_GetById" />
+  </EntityContainerMapping>
+</Mapping>

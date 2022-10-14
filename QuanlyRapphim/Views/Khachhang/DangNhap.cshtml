@@ -1,0 +1,85 @@
+﻿@model QuanlyRapphim.Customer
+
+@{
+    ViewBag.Title = "DangNhap";
+}
+
+<h2 align="center">ĐĂNG NHẬP</h2>
+
+<style>
+    body {
+        background-color: #DCDCDC;
+        
+    }
+
+    h2 {
+        color: #FF00FF;
+    }
+
+    p {
+        color: #000000;
+    }
+</style>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <link rel="stylesheet" type="text/css" href="~/css/DangNhap.css" />
+    <div class="container h-100" align="center">
+        <div class="d-flex justify-content-center h-100" align="center">
+            <div class="user_card" align="center">
+                <div class="d-flex justify-content-center" >
+                    <div align="center" class="brand_logo_container">
+                        <img src="~/Content/images/logo.png"  class="brand_logo" alt="Logo"  >
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center form_container">
+                    <form>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+
+                            </div>
+
+                        </div>
+                        <br />
+                        <br />
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control",@type="password" } })
+                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customControlInline">
+                                <label class="custom-control-label" for="customControlInline">Remember me</label>
+                            </div>
+                        </div>
+                        <div class="form-group" align="center" >
+                            <div class="d-flex justify-content-center mt-3 login_container">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Đăng nhập" class="btn btn-default" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+}
+
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }

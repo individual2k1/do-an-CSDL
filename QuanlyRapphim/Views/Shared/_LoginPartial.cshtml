@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNet.Identity
+
+@if (Session["TrangThai"] as string != null)
+{
+    using (Html.BeginForm("DangXuat", "Khachhang", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+    @Html.AntiForgeryToken()
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            @Html.ActionLink("Xin Chào" +" "+ Session["Fullname"].ToString()+ "!","ThongtinKH", "Khachhang", new {CusId = Session["CusId"] as string},null)
+        </li>
+        <li><a href="javascript:document.getElementById('logoutForm').submit()">ĐĂNG XUẤT</a></li>
+    </ul>
+    }
+
+    
+}
+else
+{
+
+<ul class="nav navbar-nav navbar-right">
+    <li>@Html.ActionLink("ĐĂNG KÝ", "DangKy", "Khachhang", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+    <li>@Html.ActionLink("ĐĂNG NHẬP", "DangNhap", "Khachhang", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        
+</ul>
+}

@@ -1,0 +1,128 @@
+﻿@model IEnumerable<QuanlyRapphim.Booking>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<style>
+    body {
+        background-color: #DAA520;
+    }
+
+    th {
+        background-color: #04AA6D;
+        color: white;
+    }
+
+    p {
+        color: white;
+    }
+
+    h3 {
+        color: #000000;
+    }
+</style>
+
+
+<div class="row">
+    <h3 class="display-4 text-center">GIÁ VÉ</h3>
+    <hr class="bg-dark w-25">
+    <div class="col-md-4">
+
+        <div class="card">
+            <img class="card-img-top" style="width:370px; height:280px" src="~/Content/images/cqt_2d-cap.jpeg" alt="Card image cap">
+            <div class="card-block p-3">
+                <h3 class="card-title" align="center" style="font-family:'Times New Roman';font-size:28px;">GIÁ ƯU ĐÃI</h3>
+                <a href="https://localhost:44361/Phim" class="btn btn-primary rounded-0 mb-2">Chi tiết</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img class="card-img-top" style="width:370px; height:280px" src="~/Content/images/c'member.jpg" alt="Card image cap" />
+            <div class="card-block p-3">
+                <h3 class="card-title" align="center" style="font-family:'Times New Roman';font-size:28px;">GIÁ THÀNH VIÊN</h3>
+                <a href="https://localhost:44361/Phim" class="btn btn-primary rounded-0 mb-2">Chi tiết</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <img class="card-img-top" style="width:370px; height:280px" src="~/Content/images/cqt_3d.png" alt="Card image cap" />
+            <div class="card-block p-3">
+                <h3 class="card-title" align="center" style="font-family:'Times New Roman';font-size:28px;">GIÁ THƯỜNG</h3>
+                <a href="https://localhost:44361/Phim" class="btn btn-primary rounded-0 mb-2">Chi tiết</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+
+<h2 align="center">DOANH SỐ BÁN VÉ</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bilmoney)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateBooking)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShowTime.ShoId)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bilmoney)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateBooking)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShowTime.ShoId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.BooId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.BooId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.BooId })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,343 @@
+﻿@model IEnumerable<QuanlyRapphim.Film>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 align="right">DANH SÁCH PHIM</h2>
+<style>
+    body {
+        background-color: #DAA520;
+        width: 1200px;
+        margin: 0px auto;
+    }
+
+    h2 {
+        color: #000000;
+    }
+
+    h3 {
+        color: white;
+    }
+
+    th {
+        background-color: #04AA6D;
+        color: white;
+    }
+
+    td {
+        color: white;
+    }
+
+    table {
+        background-color: #DAA520;
+    }
+</style>
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="~/css/phim.css" />
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="sidebar">
+                <div class="widget border-0">
+                    <div class="search">
+                        <input class="form-control" type="text" placeholder="Search Keywords">
+                    </div>
+                </div>
+                <div class="widget border-0">
+                    <div class="locations">
+                        <input class="form-control" type="text" placeholder="All Locations">
+                    </div>
+                </div>
+                <div class="widget">
+                    <div class="widget-title widget-collapse">
+                        <h6>Thể loại</h6>
+                        <a class="ml-auto" data-toggle="collapse" href="#dateposted" role="button" aria-expanded="false" aria-controls="dateposted"> <i class="fas fa-chevron-down"></i> </a>
+                    </div>
+                    <div class="collapse show" id="dateposted">
+                        <div class="widget-content">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="dateposted1">
+                                <label class="custom-control-label" for="dateposted1">Hành động</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="dateposted2">
+                                <label class="custom-control-label" for="dateposted2">Tình Cảm</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="dateposted3">
+                                <label class="custom-control-label" for="dateposted3">Khoa học viễn tưởng</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="dateposted4">
+                                <label class="custom-control-label" for="dateposted4">Hài hước</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="dateposted5">
+                                <label class="custom-control-label" for="dateposted5">Hoạt hình</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget">
+                    <div class="widget-title widget-collapse">
+                        <h6>Quốc gia sản xuất</h6>
+                        <a class="ml-auto" data-toggle="collapse" href="#specialism" role="button" aria-expanded="false" aria-controls="specialism"> <i class="fas fa-chevron-down"></i> </a>
+                    </div>
+                    <div class="collapse show" id="specialism">
+                        <div class="widget-content">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="specialism1">
+                                <label class="custom-control-label" for="specialism1">Hàn Quốc</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="specialism2">
+                                <label class="custom-control-label" for="specialism2">Trung Quốc</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="specialism3">
+                                <label class="custom-control-label" for="specialism3">Âu Mỹ</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="specialism4">
+                                <label class="custom-control-label" for="specialism4">Thái Lan</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="specialism5">
+                                <label class="custom-control-label" for="specialism5">Nhật Bản</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget">
+                    <div class="widget-title widget-collapse">
+                        <h6>Phim</h6>
+                        <a class="ml-auto" data-toggle="collapse" href="#jobtype" role="button" aria-expanded="false" aria-controls="jobtype"> <i class="fas fa-chevron-down"></i> </a>
+                    </div>
+                    <div class="collapse show" id="jobtype">
+                        <div class="widget-content">
+                            <div class="custom-control custom-checkbox fulltime-job">
+                                <input type="checkbox" class="custom-control-input" id="jobtype1">
+                                <label class="custom-control-label" for="jobtype1">Phim đang chiếu</label>
+                            </div>
+                            <div class="custom-control custom-checkbox parttime-job">
+                                <input type="checkbox" class="custom-control-input" id="jobtype2">
+                                <label class="custom-control-label" for="jobtype2">Phim sắp chiếu</label>
+                            </div>
+                            <div class="custom-control custom-checkbox freelance-job">
+                                <input type="checkbox" class="custom-control-input" id="jobtype3">
+                                <label class="custom-control-label" for="jobtype3">Suất chiếu đặc biệt</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="widget">
+                    <div class="widget-title widget-collapse">
+                        <h6>Chất lượng phim</h6>
+                        <a class="ml-auto" data-toggle="collapse" href="#experience" role="button" aria-expanded="false" aria-controls="experience"> <i class="fas fa-chevron-down"></i> </a>
+                    </div>
+                    <div class="collapse show" id="experience">
+                        <div class="widget-content">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="experience1">
+                                <label class="custom-control-label" for="experience1">2D</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="experience2">
+                                <label class="custom-control-label" for="experience2">3D</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="widget border-0">
+                    <div class="widget-add">
+                        <img class="img-fluid" src="images/add-banner.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h6 class="mb-0">PHIM ĐANG CHIẾU<span class="text-primary"></span></h6>
+                </div>
+            </div>
+            <div class="job-filter mb-4 d-sm-flex align-items-center">
+                <div class="job-alert-bt"> <a class="btn btn-md btn-dark" href="#"><i class="fa fa-envelope"></i></a> </div>
+                <div class="job-shortby ml-sm-auto d-flex align-items-center">
+                    <form class="form-inline">
+                        <div class="form-group mb-0">
+                            <label class="justify-content-start mr-2">Lọc</label>
+                            <div class="short-by">
+                                <select class="form-control basic-select select2-hidden-accessible" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                    <option data-select2-id="3">Phim sắp chiếu</option>
+                                    <option>Suất chiếu đặc biệt</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <table class="table">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <link rel="stylesheet" href="~/css/indexphim.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+                            <div class="container">
+                                <!-- start event block -->
+                                <div class="row align-items-center event-block no-gutters margin-40px-bottom">
+                                    <div class="col-lg-5 col-sm-12">
+                                        <div class="position-relative">
+                                            <img style="width:400px; height:500px" src="~/Content/images/@Html.DisplayFor(modelItem => item.Picture)" />
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7 col-sm-12">
+                                        <div class="padding-60px-lr md-padding-50px-lr sm-padding-30px-all xs-padding-25px-all">
+                                            <h5 class="margin-15px-bottom md-margin-10px-bottom font-size22 md-font-size20 xs-font-size18 font-weight-500"><a href="event-details.html" class="text-theme-color">PHIM</a></h5>
+                                            <ul class="event-time margin-10px-bottom md-margin-5px-bottom">
+                                                <li><b><i class="far fa-clock margin-10px-right"></i>@Html.DisplayFor(modelItem => item.NameF)</b> </li>
+                                                <li><i class="fas fa-user margin-5px-right"></i>Đạo diễn: @Html.DisplayFor(modelItem => item.Director)</li>
+                                                <li><i class="fas fa-user margin-5px-right"></i>Diễn viên: @Html.DisplayFor(modelItem => item.Actor)</li>
+                                                <li><i class="fas fa-user margin-5px-right"></i>Mô tả: @Html.DisplayFor(modelItem => item.Description)</li>
+                                                <li><i class="fas fa-user margin-5px-right"></i>Chi tiết: @Html.DisplayFor(modelItem => item.Detail)</li>
+                                                <li><i class="fas fa-user margin-5px-right"></i>Quốc gia sản xuất: @Html.DisplayFor(modelItem => item.Country.NameCo)</li>
+                                                <li><i class="fas fa-user margin-5px-right"></i>Thể loại: @Html.DisplayFor(modelItem => item.TypeFilm.NameT)</li>
+                                                <li><i class="fas fa-user margin-5px-right"></i>Status: @Html.DisplayFor(modelItem => item.Status) </li>
+
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                }
+            </table>
+
+        </div>
+
+
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+
+
+<h2 align="center">DANH SÁCH PHIM </h2>
+<style>
+    th {
+        background-color: #04AA6D;
+        color: white;
+    }
+
+
+</style>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NameF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Director)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Actor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Duration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Detail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Picture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PictureBig)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country.NameCo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TypeFilm.NameT)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Director)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Actor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Detail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Picture)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PictureBig)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country.NameCo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeFilm.NameT)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.FilId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.FilId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.FilId })
+            </td>
+        </tr>
+    }
+
+</table>
+

@@ -1,0 +1,105 @@
+﻿@model IEnumerable<QuanlyRapphim.ShowTime>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 align="center">LỊCH CHIẾU PHIM</h2>
+
+<style>
+
+    body {
+        background-color: #DAA520;
+        width: 1200px;
+        margin: 0px auto;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    h3 {
+        color: white;
+    }
+
+    th {
+        background-color: #04AA6D;
+        color: white;
+    }
+    td{
+        color:white;
+    }
+    table {
+        background-color: #04AA6D;
+
+    }
+</style>
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ShowTime1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.View)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cinema.NameCi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Film.NameF)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShowTime1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.View)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cinema.NameCi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Film.NameF)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ShoId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ShoId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ShoId })
+            </td>
+            <td>
+                <h3 class="btn btn-custom" href="https://localhost:44361/Ve/Create">Đặt vé</h3>
+            </td>
+        </tr>
+    }
+
+</table>
+
+

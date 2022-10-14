@@ -1,0 +1,104 @@
+﻿@model QuanlyRapphim.sp_Admin_GetById_Result
+
+@{
+    ViewBag.Title = "ADMIN";
+}
+
+<h2 align="center">THÔNG TIN ADMIN</h2>
+<hr />
+
+
+<head>
+
+     <link rel="stylesheet" type="text/css" href="~/css/admin.css" />
+</head>
+<div class="container">
+    <div class="row gutters">
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="account-settings">
+                        <div class="user-profile">
+                            <div class="user-avatar">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Maxwell Admin">
+                            </div>
+                            <h5 class="user-name">@Html.DisplayFor(model => model.FullName)</h5>
+                            <h6 class="user-email">@Html.DisplayFor(model => model.Email)</h6>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="row gutters">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <h6 class="mb-3 text-primary">Personal Details</h6>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="fullName">Họ và tên</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="@Html.DisplayFor(model => model.FullName)">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="eMail">Email</label>
+                                <input type="email" class="form-control" id="eMail" placeholder="@Html.DisplayFor(model => model.Email)">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="phone">SDT</label>
+                                <input type="text" class="form-control" id="phone" placeholder=" @Html.DisplayFor(model => model.Phone)">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="website">ADMINID</label>
+                                <input type="url" class="form-control" id="website" placeholder=" @Html.DisplayFor(model => model.AdmId)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gutters">
+                        
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="Street">Địa chỉ</label>
+                                <input type="name" class="form-control" id="Street" placeholder="@Html.DisplayFor(model => model.Address)">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="ciTy">Tên đăng nhập</label>
+                                <input type="name" class="form-control" id="ciTy" placeholder=" @Html.DisplayFor(model => model.Username)">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="sTate">Mật khẩu</label>
+                                <input type="text" class="form-control" id="sTate" placeholder="@Html.DisplayFor(model => model.Pass)">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="zIp">Ngày sinh</label>
+                                <input type="text" class="form-control" id="zIp" placeholder="@Html.DisplayFor(model => model.Bod)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gutters">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="text-right">
+                                <button type="button" id="submit" name="submit" class="btn btn-secondary">Cancel</button>
+                                <button type="button" id="submit" name="submit" class="btn btn-primary">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
